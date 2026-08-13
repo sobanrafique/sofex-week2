@@ -436,6 +436,84 @@ function exportResources() {
     showToast('Resources exported as JSON', 'success');
 }
 
+function showSuggestions() {
+    const suggestions = state.suggestions;
+    if (suggestions.length === 0) {
+        showModal('Submitted Suggestions', `
+            <div style="text-align:center;padding:40px 20px;color:var(--text-muted);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="56" height="56" style="opacity:0.6;margin-bottom:16px;">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <h4 style="font-size:18px;margin-bottom:8px;color:var(--text-primary);">No suggestions yet</h4>
+                <p style="font-size:14px;">Use the "Suggest a Resource" form below to share a great free learning resource with the community.</p>
+            </div>
+        `);
+        return;
+    }
+    const listHtml = suggestions.slice().reverse().map((s, i) => {
+        const index = suggestions.length - i;
+        const date = new Date(s.submittedAt).toLocaleString();
+        return `
+            <div style="border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px;background:var(--bg-secondary);">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px;flex-wrap:wrap;">
+                    <div>
+                        <span style="display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;background:var(--primary-light);color:var(--primary-dark);text-transform:uppercase;letter-spacing:0.05em;">
+                            #${index} ${s.status}
+                        </span>
+                        <span style="font-size:12px;color:var(--text-muted);margin-left:8px;">${date}</span>
+                    </div>
+                    <span style="font-size:12px;padding:3px 10px;border-radius:6px;background:#DBEAFE;color:#1E40AF;font-weight:600;">${s.category}</span>
+                </div>
+                <h4 style="font-size:15px;margin-bottom:6px;color:var(--text-primary);">${s.title}</h4>
+                <p style="font-size:13px;color:var(--text-secondary);margin-bottom:10px;line-height:1.5;">${s.description}</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--text-secondary);margin-bottom:10px;">
+                    <span style="padding:3px 8px;border-radius:6px;background:var(--bg-tertiary);">${s.difficulty}</span>
+                    <span style="padding:3px 8px;border-radius:6px;background:var(--bg-tertiary);">${s.type}</span>
+                    ${s.submitterName ? `<span style="padding:3px 8px;border-radius:6px;background:var(--bg-tertiary);">By: ${s.submitterName}</span>` : ''}
+                </div>
+                <a href="${s.link}" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:600;word-break:break-all;">${s.link}</a>
+            </div>
+        `;
+    }).join('');
+    const content = `
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:12px;flex-wrap:wrap;">
+            <p style="font-size:14px;color:var(--text-secondary);margin:0;"><strong style="color:var(--text-primary);">${suggestions.length}</strong> total suggestion${suggestions.length === 1 ? '' : 's'} (stored locally)</p>
+            <button class="btn btn-primary" onclick="exportSuggestionsJSON()" style="padding:10px 16px;font-size:13px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Export as JSON File
+            </button>
+        </div>
+        ${listHtml}
+    `;
+    showModal(`Submitted Suggestions (${suggestions.length})`, content);
+}
+
+function exportSuggestionsJSON() {
+    const data = {
+        exportedAt: new Date().toISOString(),
+        source: 'Student Resource Hub - Suggest a Resource Form',
+        storage: 'localStorage["srh_resource_suggestions"]',
+        count: state.suggestions.length,
+        suggestions: state.suggestions
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `resource-suggestions-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast(`${state.suggestions.length} suggestion(s) exported to JSON file`, 'success');
+}
+
 function downloadCSV() {
     const headers = ['ID', 'Title', 'Category', 'Difficulty', 'Type', 'Rating', 'Upvotes', 'Free', 'Verified', 'Link', 'Description'];
     const escape = (v) => {
