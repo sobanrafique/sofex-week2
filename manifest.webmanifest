@@ -1,0 +1,112 @@
+{
+  "name": "Student Resource Hub — SafeX University Programs",
+  "short_name": "StudentHub",
+  "description": "Curated free learning resources for Web Dev, AI & ML, Cybersecurity and Business — verified by SafeX University Programs.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["education", "productivity", "books"],
+  "background_color": "#0b1120",
+  "theme_color": "#6366f1",
+  "id": "./",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Browse All Resources",
+      "short_name": "All Resources",
+      "description": "Open the full library of curated learning resources.",
+      "url": "./index.html#resources",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='96' height='96' rx='20' fill='url(%23g)'/><path fill='white' d='M22 22h28a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H22a4 4 0 0 1-4-4V26a4 4 0 0 1 4-4zm0 30h22a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H22a4 4 0 0 1-4-4V56a4 4 0 0 1 4-4zm36-26h16a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H58a4 4 0 0 1-4-4V30a4 4 0 0 1 4-4zm0 30h16a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H58a4 4 0 0 1-4-4V60a4 4 0 0 1 4-4z'/></svg>",
+          "sizes": "96x96",
+          "type": "image/svg+xml",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "Saved Resources",
+      "short_name": "Saved",
+      "description": "Quickly open your bookmarked learning resources.",
+      "url": "./index.html?saved=1",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='96' height='96' rx='20' fill='url(%23g)'/><path fill='white' d='M30 22a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v52l-18-12L30 74z'/></svg>",
+          "sizes": "96x96",
+          "type": "image/svg+xml",
+          "purpose": "any"
+        }
+      ]
+    }
+  ],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='lg' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23lg)'/><path fill='white' d='M10 6a2 2 0 0 0-2 2v17.5l8-5 8 5V8a2 2 0 0 0-2-2zm0 0' font-weight='700'/></svg>",
+      "sizes": "32x32",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><defs><linearGradient id='lg' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='48' height='48' rx='12' fill='url(%23lg)'/><path fill='white' d='M15 9a3 3 0 0 0-3 3v26.5l12-7.5 12 7.5V12a3 3 0 0 0-3-3zm0 0' font-weight='700'/></svg>",
+      "sizes": "48x48",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'><defs><linearGradient id='lg' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='72' height='72' rx='18' fill='url(%23lg)'/><path fill='white' d='M22 13a4 4 0 0 0-4 4v40l18-11.5L54 57V17a4 4 0 0 0-4-4zm0 0' font-weight='700'/></svg>",
+      "sizes": "72x72",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><defs><linearGradient id='lg' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='96' height='96' rx='24' fill='url(%23lg)'/><path fill='white' d='M30 17a5 5 0 0 0-5 5v53.5l23-14.5 23 14.5V22a5 5 0 0 0-5-5zm0 0' font-weight='700'/></svg>",
+      "sizes": "96x96",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><defs><linearGradient id='lg' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='128' height='128' rx='32' fill='url(%23lg)'/><path fill='white' d='M40 22a6 6 0 0 0-6 6v71l30-19 30 19V28a6 6 0 0 0-6-6zm0 0' font-weight='700'/></svg>",
+      "sizes": "128x128",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 144 144'><defs><linearGradient id='lg' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='144' height='144' rx='36' fill='url(%23lg)'/><path fill='white' d='M45 25a7 7 0 0 0-7 7v80l34-21.5 34 21.5V32a7 7 0 0 0-7-7zm0 0' font-weight='700'/></svg>",
+      "sizes": "144x144",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><defs><linearGradient id='lg' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='192' height='192' rx='48' fill='url(%23lg)'/><path fill='white' d='M60 33a9 9 0 0 0-9 9v107l45-28.5 45 28.5V42a9 9 0 0 0-9-9zm0 0' font-weight='700'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><linearGradient id='lg' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='512' height='512' rx='128' fill='url(%23lg)'/><path fill='white' d='M160 88a24 24 0 0 0-24 24v286l120-76 120 76V112a24 24 0 0 0-24-24zm0 0' font-weight='700'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'><defs><linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%230b1120'/><stop offset='100%25' stop-color='%231e1b4b'/></linearGradient><linearGradient id='ac' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='1280' height='720' fill='url(%23bg)'/><rect x='40' y='32' width='1200' height='64' rx='16' fill='rgba(255,255,255,0.05)'/><rect x='72' y='54' width='180' height='20' rx='4' fill='url(%23ac)'/><rect x='40' y='130' width='1200' height='180' rx='24' fill='rgba(255,255,255,0.04)'/><rect x='80' y='170' width='600' height='28' rx='6' fill='%23e2e8f0'/><rect x='80' y='210' width='500' height='18' rx='4' fill='rgba(226,232,240,0.6)'/><rect x='80' y='250' width='220' height='44' rx='12' fill='url(%23ac)'/><g opacity='0.9'><rect x='40' y='340' width='380' height='340' rx='24' fill='rgba(255,255,255,0.05)'/><rect x='80' y='370' width='80' height='24' rx='6' fill='url(%23ac)'/><rect x='80' y='410' width='300' height='20' rx='4' fill='%23e2e8f0'/><rect x='80' y='440' width='300' height='14' rx='3' fill='rgba(226,232,240,0.5)'/><rect x='80' y='462' width='260' height='14' rx='3' fill='rgba(226,232,240,0.4)'/><rect x='80' y='610' width='300' height='42' rx='12' fill='rgba(99,102,241,0.25)'/></g><g opacity='0.9'><rect x='450' y='340' width='380' height='340' rx='24' fill='rgba(255,255,255,0.05)'/><rect x='490' y='370' width='80' height='24' rx='6' fill='url(%23ac)'/><rect x='490' y='410' width='300' height='20' rx='4' fill='%23e2e8f0'/><rect x='490' y='440' width='300' height='14' rx='3' fill='rgba(226,232,240,0.5)'/><rect x='490' y='462' width='260' height='14' rx='3' fill='rgba(226,232,240,0.4)'/><rect x='490' y='610' width='300' height='42' rx='12' fill='rgba(99,102,241,0.25)'/></g><g opacity='0.9'><rect x='860' y='340' width='380' height='340' rx='24' fill='rgba(255,255,255,0.05)'/><rect x='900' y='370' width='80' height='24' rx='6' fill='url(%23ac)'/><rect x='900' y='410' width='300' height='20' rx='4' fill='%23e2e8f0'/><rect x='900' y='440' width='300' height='14' rx='3' fill='rgba(226,232,240,0.5)'/><rect x='900' y='462' width='260' height='14' rx='3' fill='rgba(226,232,240,0.4)'/><rect x='900' y='610' width='300' height='42' rx='12' fill='rgba(99,102,241,0.25)'/></g></svg>",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Student Resource Hub browsing the curated library with filters and resource cards."
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 844'><defs><linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%230b1120'/><stop offset='100%25' stop-color='%231e1b4b'/></linearGradient><linearGradient id='ac' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='390' height='844' fill='url(%23bg)'/><rect x='20' y='24' width='350' height='54' rx='14' fill='rgba(255,255,255,0.05)'/><rect x='44' y='42' width='140' height='18' rx='4' fill='url(%23ac)'/><rect x='20' y='100' width='350' height='170' rx='22' fill='rgba(255,255,255,0.04)'/><rect x='40' y='130' width='280' height='22' rx='5' fill='%23e2e8f0'/><rect x='40' y='160' width='240' height='14' rx='3' fill='rgba(226,232,240,0.6)'/><rect x='40' y='200' width='180' height='36' rx='10' fill='url(%23ac)'/><g opacity='0.9'><rect x='20' y='295' width='350' height='230' rx='22' fill='rgba(255,255,255,0.05)'/><rect x='44' y='320' width='70' height='20' rx='5' fill='url(%23ac)'/><rect x='44' y='352' width='280' height='18' rx='4' fill='%23e2e8f0'/><rect x='44' y='378' width='280' height='12' rx='3' fill='rgba(226,232,240,0.5)'/><rect x='44' y='396' width='240' height='12' rx='3' fill='rgba(226,232,240,0.4)'/><rect x='44' y='450' width='302' height='38' rx='11' fill='rgba(99,102,241,0.25)'/></g><g opacity='0.9'><rect x='20' y='545' width='350' height='230' rx='22' fill='rgba(255,255,255,0.05)'/><rect x='44' y='570' width='70' height='20' rx='5' fill='url(%23ac)'/><rect x='44' y='602' width='280' height='18' rx='4' fill='%23e2e8f0'/><rect x='44' y='628' width='280' height='12' rx='3' fill='rgba(226,232,240,0.5)'/><rect x='44' y='646' width='240' height='12' rx='3' fill='rgba(226,232,240,0.4)'/><rect x='44' y='700' width='302' height='38' rx='11' fill='rgba(99,102,241,0.25)'/></g></svg>",
+      "sizes": "390x844",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "Mobile-optimized Student Resource Hub with responsive card layouts and touch-friendly controls."
+    }
+  ]
+}
